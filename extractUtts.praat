@@ -1,4 +1,12 @@
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/"
+# extractUtts.praat
+# Extract utterances from longer wav file
+# Written by Eleanor Chodroff
+# Nov 6 2020
+
+
+#################
+
+dir$ = "/Users/xxx/xxx/Phonological Trains data/models/"
 Create Strings as file list: "files", dir$ + "*.wav"
 nFiles = Get number of strings
 

@@ -1,9 +1,13 @@
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/wav/rhythm_extracts/"
+# getSyllableNucleiRate.praat
+# Get average number of syllables per utterance duration
+# Written by Eleanor Chodroff
+# 17 Dec 2019
 
+dir$ = "/Users/xxx/xxx/Phonological Trains data/wav/rhythm_extracts/"
 Create Strings as file list: "files", dir$ + "*syllables.TextGrid"
 nFiles = Get number of strings
 
-outfile$ = "/Users/eleanorchodroff/Desktop/syllableNucleiRate.csv"
+outfile$ = "/Users/xxx/xxx/syllableNucleiRate.csv"
 appendFileLine: outfile$, "file,nSyll,dur,rate"
 
 for i from 1 to nFiles

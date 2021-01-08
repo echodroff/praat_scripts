@@ -1,8 +1,17 @@
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/male/"
+# interUttPauseDuration.praat
+# Get pause duration *between* utterances 
+# (inter-utterance pause duration)
+# Written by Eleanor Chodroff
+# Nov 16 2020
+
+
+#################
+
+dir$ = "/Users/xxx/xxx/Phonological Trains data/models/male/"
 Create Strings as file list: "files", dir$ + "*.TextGrid"
 nFiles = Get number of strings
 
-outfile$ = "/Users/eleanorchodroff/Desktop/models_interUttPauseDuration.csv"
+outfile$ = "/Users/xxx/xxx/models_interUttPauseDuration.csv"
 sep$ = ","
 
 for i from 1 to nFiles

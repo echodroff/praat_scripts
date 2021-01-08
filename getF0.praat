@@ -8,8 +8,7 @@
 #################
 
 # where is the directory w/ TextGrids and wavs located? make sure the TextGrids and wav files have the same name and are in this same directory
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/wav/male/"
-#dir$ = "/Users/eleanorchodroff/Desktop/input/"
+dir$ = "/Users/xxx/xxx/Phonological Trains data/wav/male/"
 
 
 # where should I write the file with the formants?

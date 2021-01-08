@@ -1,17 +1,15 @@
-# getVoiceReport_male.praat
+# getVoiceReport.praat
 # Written by Eleanor Chodroff
 # 6 Nov 2020
-
 
 #################
 
 # where is the directory w/ TextGrids and wavs located? make sure the TextGrids and wav files have the same name and are in this same directory
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/wav/male/"
-#dir$ = "/Users/eleanorchodroff/Desktop/input/"
+dir$ = "/Users/xxx/xxx/Phonological Trains data/wav/male/"
 
 
 # where should I write the file?
-outfile$ = "/Users/eleanorchodroff/Desktop/trains_voicereport_male.csv"
+outfile$ = "/Users/xxx/xxx/trains_voicereport_male.csv"
 
 
 # hate csv files? fine, you can change that here

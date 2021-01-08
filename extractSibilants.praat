@@ -7,8 +7,7 @@
 # make sure the TextGrids and wav files have the same name
 ###################
 # where are all the languageID folders located?
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/"
-#dir$ = "/Users/eleanorchodroff/Desktop/input/"
+dir$ = "/Users/xxx/xxx/Phonological Trains data/models/"
 
 # where should I write the file with the preliminary information?
 outfile$ = dir$ + "trains_models_fricInfo.csv"

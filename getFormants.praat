@@ -9,11 +9,11 @@
 
 # where is the directory w/ TextGrids and wavs located? make sure the TextGrids and wav files have the same name and are in this same directory
 dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/female/"
-#dir$ = "/Users/eleanorchodroff/Desktop/input/"
+#dir$ = "/Users/xxx/xxx/input/"
 
 
 # where should I write the file with the formants?
-outfile$ = "/Users/eleanorchodroff/Desktop/models_trains_formants_female5500.csv"
+outfile$ = "/Users/xxx/xxx/models_trains_formants_female5500.csv"
 
 maxformant = 5500
 

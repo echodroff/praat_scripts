@@ -1,19 +1,18 @@
 # Multitaper Spectral Analysis on Sound Segments
 # Created by Colin Wilson and Eleanor Chodroff
 # 2014, 2016
-# Last updated: Jul 7 2020
+# Last updated by Eleanor Chodroff: Dec 2020
 
 # This script reads in a series of sound extracts (set up here for sibilant extracts) and takes the
-# following measures over the middle 50% of the extract (.wav) using a multitaper spectrum:
-# COG (M1), spectral peak, 
-# spectral peak between 3k7k (i.e., FreqM for alveolar sibilants), spectral peak btw 2k and 6k (FreqM for postalveolar sibilants),
-# spectral variance (M2), skewness (M3), kurtosis (M4)
+# following measures over the middle 20 ms of the extract (.wav) using a multitaper spectrum:
+# spectral peak,
+# COG (M1), spectral variance (M2), skewness (M3), kurtosis (M4)
 
-# The analysis interval is by default set to the middle 50% but this can be modified to any proportional width and centered over the beginning, middle, or end of the fricative
+# The analysis interval is by default set to the middle 20 ms but this can be modified to any proportional or durational width and centered over the beginning, middle, or end of the fricative
 
 # For each directory of sound extracts, an output file is created with the above measures called DIRECTORYsibilants.csv
 
-# For any further use of this script, PLEASE CITE:
+# For any further use of this particular script, PLEASE CITE:
 # Chodroff, E., & Wilson, C. (2014). Burst spectrum as a cue for the stop voicing contrast in American English. The Journal of the Acoustical Society of America, 136(5), 2762-2772.
 
 # ASSUMPTIONS OF THIS SCRIPT:
@@ -22,9 +21,8 @@
 #################
 ### CHANGE ME ###
 #################
-#mydir <- '/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/fric_extracts300/' # main directory with sub-folders of sound extracts
-mydir <- '/Users/eleanorchodroff/Desktop/trains/extracts_300/' # main directory with sub-folders of sound extracts
-outdir <- '/Users/eleanorchodroff/Desktop/trains/' # output directory for text file
+mydir <- '/Desktop/trains/extracts_300/' # main directory with sub-folders of sound extracts
+outdir <- '/Desktop/trains/' # output directory for text file
 SAMPLE_RATE <- 16000 # sampling rate of extracts
 
 NW_TIME_BANDWIDTH <- 4 # time-bandwidth parameter for multitaper spectrum (nw)
@@ -161,13 +159,10 @@ for (i in 1:length(files)) {
         
 	peaks[i] <- getSpectralPeak(mti) # get spectral peak
 	peakamps[i] <- getSpectralPeakAmp(mti) # get amplitude of spectral peak
-
 }
 
 # set up output file
-measures <- data.frame(stim = files, cog = cogs, peak = peaks, peakamp = peakamps,
-spectral.var = specvars, skew = skews, kurtosis = kurts)
-
+measures <- data.frame(stim = files, cog = cogs, peak = peaks, peakamp = peakamps, spectral.var = specvars, skew = skews, kurtosis = kurts)
 
 # save output
 write.csv(measures, paste0(outdir, outfile), row.names = F, quote = F)

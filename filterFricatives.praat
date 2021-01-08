@@ -1,4 +1,11 @@
-dir$ = "/Users/eleanorchodroff/Dropbox/Phonological Trains data/models/fric_extracts300/"
+# filterFricatives.praat
+# Run high pass filter on fricatives
+# Written by Eleanor Chodroff
+# Nov 6 2020
+
+#################
+
+dir$ = "/Users/xxx/xxx/Phonological Trains data/models/fric_extracts300/"
 Create Strings as file list: "files", dir$ + "*.wav"
 nFiles = Get number of strings
 
